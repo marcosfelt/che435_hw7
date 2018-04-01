@@ -30,6 +30,8 @@ for Kc = [-1 -10]
     text = 'Kc = ' + string(Kc);
     title(text)
     i=i+1;
+    filename = 'Kc_' + string(Kc) + '.png';
+    saveas(gcf, filename)
 end
 figure
 plot(time(1:len(1,1),1),L(1:len(1,1),1));
@@ -38,3 +40,4 @@ plot(time(1:len(2,1),2),L(1:len(2,1),2));
 xlabel('Time (min)')
 ylabel('Height (m)')
 legend('Kc = -1', 'Kc = -10','Location', 'eastoutside')
+saveas(gcf, 'time_vs_height.png')
