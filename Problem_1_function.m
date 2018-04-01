@@ -10,7 +10,7 @@ L = Y(2);
 A = 0.3; %m^2
 rho = 1000; %kg/m^3
 tau_v = 5; %s
-Lsp = 3;
+Lsp = 1;
 Fbar = 1;
 if t < 10
     Fin = 1 + 0.5*sin(pi*t/10);

@@ -29,9 +29,9 @@ for Kc = [-1 -10]
     legend('Fout (kg/s)', 'Height(m)','Location', 'east')
     text = 'Kc = ' + string(Kc);
     title(text)
-    hold off
     i=i+1;
 end
+figure
 plot(time(1:len(1,1),1),L(1:len(1,1),1));
 hold on
 plot(time(1:len(2,1),2),L(1:len(2,1),2));
