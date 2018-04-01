@@ -1,0 +1,21 @@
+function dYdt = Problem_1_function(t,Y)
+% Unpack vector of state variables
+%
+Fout = Y(1);
+L = Y(2);
+
+%
+% Define constants for our problem
+%
+A = 0.3; %m^2
+rho = 1.0; %kg/L
+tau_v = 5; %s
+Lsp = 3;
+Fbar = 2;
+Kc = 10;
+Fin = 1 + 0.5*sin(pi*t/10)*(t<10);
+
+%
+% Defining our functions
+%
+dFoutdt =1/tau_v*(s ;

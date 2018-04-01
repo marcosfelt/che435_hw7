@@ -1,0 +1,33 @@
+% script_ode45_template
+%
+%Constants
+
+%
+% solving equations
+L = zeros(890, 2);
+i=1;
+for Kc = [-1 -10]
+    fhandle = @(t,Y)Problem_1_function(t,Y, Kc); % function handle
+    tfinal = 60; % in minutes
+    tspan = [0 tfinal*60]; % start and stop time for the simulation
+    Y0 = [1.0 2]; % vector of initial conditions
+    [t,Y] = ode45(fhandle,tspan,Y0);
+    %
+    % Any extra manipulation
+    %
+
+    Fout = Y(:,1);
+    len = length(Y(:,2));
+    L(1:len,i) = Y(:,2);
+    figure
+    plot(t, Fout)
+    hold on
+    plot(t,L(:,)
+    xlabel('Time (min)')
+    legend('Fout (kg/s)', 'Height(m)','Location', 'east')
+    text = 'Kc = ' + string(Kc);
+    title(text)
+    hold off
+    i=i+1;
+end
+plot(t,L);
